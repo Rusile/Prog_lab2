@@ -2,13 +2,20 @@ package moves;
 
 import ru.ifmo.se.pokemon.*;
 
-public class DoubleEdge extends PhysicalMove{
-    public DoubleEdge(){
+public class DoubleEdge extends PhysicalMove {
+    public DoubleEdge() {
         super(Type.NORMAL, 120, 100);
 
     }
-    protected void applySelfDamage(Pokemon att, double v){
-        this. = v * (1/3);
+
+    @Override
+    protected String describe() {
+        return "Использует DoubleEdge";
+    }
+
+    @Override
+    protected void applySelfDamage(Pokemon att, double v) {
+        att.setMod(Stat.HP, 1);
     }
 
 
